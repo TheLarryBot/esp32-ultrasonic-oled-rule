@@ -10,9 +10,17 @@
 
 Adafruit_SSD1306 display(ANCHO_PANTALLA, ALTO_PANTALLA, &Wire, OLED_RESET);
 
+//Conexión Oled
+//GPIO21 → SDA (OLED)
+//GPIO22 → SCL (OLED)
+//3.3V   → VCC (OLED)
+
+//Conexion ultrasonico
 const int pinTrig = 25;  // Pin de trigger del sensor ultrasónico
 const int pinEcho = 26;  // Pin de echo del sensor ultrasónico
-const int led = 2;      // Pin del LED que se enciende cuando la distancia es muy cercana
+//El sensor con su respectiva conexión a GND & VCC 5v o 3.3v del esp32
+
+const int led = 2;       // Pin del LED que se enciende cuando la distancia es muy cercana
 
 void setup() {
   pinMode(led, OUTPUT);
